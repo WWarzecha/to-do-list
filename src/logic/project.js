@@ -1,7 +1,9 @@
+import Task from './task'
+
 class project{
-    constructor(title, projects){
+    constructor(title, tasks = []){
         this._title = title;
-        this._projects = projects;
+        this._tasks = tasks;
     }
     set title(title){
         this._title = title;
@@ -9,8 +11,11 @@ class project{
     get title(){
         return this._title;
     }
-    addProject = (project) => {
-        this._projects.push(project);
+    addTask = (task) => {
+        this._tasks.push(task);
+    }
+    sortTasks = () => {
+        this._tasks.sort(Task.comparator);
     }
 }
 

@@ -6,5 +6,15 @@ import task from './logic/task';
 
 let p = new project("hey", []);
 let i = new task("hi");
-p.addProject(i);
+i.priority = 2;
+let j = new task("hello");
+j.priority = 1;
+let k = new task("hello");
+k.priority = 3;
+
+p.addTask(i);
+p.addTask(j);
+p.addTask(k);
 console.log(p);
+p.sortTasks();
+// console.log(p);

@@ -29,6 +29,9 @@ class task{
     get priority(){
         return this._priority;
     }
+    static comparator = (a, b) => {
+        return (a.priority > b.priority) ? 1 : -1;
+    }
 };
 
 export default task;
