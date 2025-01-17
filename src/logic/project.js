@@ -11,6 +11,9 @@ class project{
     get title(){
         return this._title;
     }
+    get tasks(){
+        return this._tasks;
+    }
     addTask = (task) => {
         this._tasks.push(task);
     }
